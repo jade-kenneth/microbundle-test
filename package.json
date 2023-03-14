@@ -1,6 +1,6 @@
 {
   "name": "test-microbundle",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "multiple entry using microbundle",
   "main": "index.js",
   "type": "module",
