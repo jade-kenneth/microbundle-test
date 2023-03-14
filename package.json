@@ -1,0 +1,48 @@
+{
+  "name": "@jade-kenneth/test-microbundle",
+  "version": "0.0.1",
+  "description": "multiple entry using microbundle",
+  "main": "index.js",
+  "type": "module",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "microbundle src/*.ts --jsx  React.createElement --jsxFragment React.Fragment -o dist/"
+  },
+  "exports": {
+    "./button": "./dist/button.cjs",
+    "./alert": "./dist/test-microbundle.cjs"
+  },
+  "typesVersions": {
+    "*": {
+      "button": [
+        "dist/button.d.ts"
+      ],
+      "alert": [
+        "dist/index.d.ts"
+      ]
+    }
+  },
+  "keywords": [],
+  "author": "jade kenneth darunday",
+  "license": "ISC",
+  "devDependencies": {
+    "microbundle": "^0.15.1"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.5.1",
+    "lerna": "^6.5.1"
+  },
+  "types": "./index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jade-kenneth/microbundle-test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jade-kenneth/microbundle-test/issues"
+  },
+  "homepage": "https://github.com/jade-kenneth/microbundle-test#readme"
+}
