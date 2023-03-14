@@ -1,1 +1,1 @@
-export { Alert } from "@chakra-ui/react/dist/index";
+export { Alert } from "@chakra-ui/react";
