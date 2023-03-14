@@ -1,6 +1,6 @@
 {
   "name": "test-microbundle",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "multiple entry using microbundle",
   "main": "index.js",
   "type": "module",
@@ -13,8 +13,8 @@
     "build": "microbundle --minify src/*.ts --jsx  React.createElement --jsxFragment React.Fragment -o dist/"
   },
   "exports": {
-    "./button": "./dist/button.modern.js",
-    "./alert": "./dist/test-microbundle.modern.js"
+    "./button": "./dist/button.cjs",
+    "./alert": "./dist/test-microbundle.cjs"
   },
   "typesVersions": {
     "*": {
