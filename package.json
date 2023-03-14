@@ -1,6 +1,6 @@
 {
   "name": "test-microbundle",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "multiple entry using microbundle",
   "main": "index.js",
   "type": "module",
@@ -15,11 +15,11 @@
   "exports": {
     "./button": {
       "require": "./dist/button.cjs",
-      "default": "./dist/button.modern.cjs"
+      "import": "./dist/button.modern.cjs"
     },
     "./alert": {
       "require": "./dist/test-microbundle.cjs",
-      "default": "./dist/test-microbundle.modern.cjs"
+      "import": "./dist/test-microbundle.modern.cjs"
     }
   },
   "typesVersions": {
