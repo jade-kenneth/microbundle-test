@@ -13,8 +13,8 @@
     "build": "microbundle src/*.ts --jsx  React.createElement --jsxFragment React.Fragment -o dist/"
   },
   "exports": {
-    "./button": "./dist/button.js",
-    "./alert": "./dist/test-microbundle.js"
+    "./button": "./dist/button.cjs",
+    "./alert": "./dist/test-microbundle.cjs"
   },
   "typesVersions": {
     "*": {
