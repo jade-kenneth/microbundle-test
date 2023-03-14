@@ -1,5 +1,5 @@
 {
-  "name": "@jade-kenneth/test-microbundle",
+  "name": "test-microbundle",
   "version": "0.0.1",
   "description": "multiple entry using microbundle",
   "main": "index.js",
@@ -13,8 +13,8 @@
     "build": "microbundle src/*.ts --jsx  React.createElement --jsxFragment React.Fragment -o dist/"
   },
   "exports": {
-    "./button": "./dist/button.cjs",
-    "./alert": "./dist/test-microbundle.cjs"
+    "./button": "./dist/button.js",
+    "./alert": "./dist/test-microbundle.js"
   },
   "typesVersions": {
     "*": {
