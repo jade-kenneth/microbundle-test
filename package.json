@@ -13,9 +13,16 @@
     "build": "microbundle --format modern,cjs src/*.ts --jsx  React.createElement --jsxFragment React.Fragment -o dist/"
   },
   "exports": {
-    "./button": "./dist/button.cjs",
     "./alert": {
-      "import": "./dist/test-microbundle.cjs"
+      "import": "./dist/test-microbundle.modern.js",
+      "node": "./dist/test-microbundle.cjs"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "alert": [
+        "dist/src/alert.d.ts"
+      ]
     }
   },
   "keywords": [],
