@@ -1,39 +1,22 @@
 {
-  "name": "test-microbundle",
-  "version": "0.0.9",
+  "name": "@jade-kenneth/test-microbundle",
+  "version": "0.0.1",
   "description": "multiple entry using microbundle",
   "main": "index.js",
   "type": "module",
-  "typings": "dist/index.d.ts",
+  "typings": "dist/test-microbundle.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "microbundle --minify src/*.ts --jsx  React.createElement --jsxFragment React.Fragment -o dist/"
+    "build": "microbundle --format modern,cjs src/*.ts --jsx  React.createElement --jsxFragment React.Fragment -o dist/"
   },
   "exports": {
-    "./button": {
-      "require": "./dist/button.cjs",
-      "import": "./dist/button.modern.cjs"
-    },
+    "./button": "./dist/button.cjs",
     "./alert": {
-      "require": "./dist/test-microbundle.cjs",
-      "import": "./dist/test-microbundle.modern.cjs"
+      "import": "./dist/test-microbundle.cjs"
     }
-  },
-  "typesVersions": {
-    "*": {
-      "button": [
-        "dist/button.d.ts"
-      ],
-      "alert": [
-        "dist/index.d.ts"
-      ]
-    }
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "keywords": [],
   "author": "jade kenneth darunday",
@@ -42,8 +25,7 @@
     "microbundle": "^0.15.1"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.5.1",
-    "lerna": "^6.5.1"
+    "@chakra-ui/react": "^2.5.1"
   },
   "types": "./index.d.ts",
   "repository": {
