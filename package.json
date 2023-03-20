@@ -1,6 +1,6 @@
 {
   "name": "test-microbundle",
-  "version": "0.0.16",
+  "version": "0.0.18",
   "description": "multiple entry using microbundle",
   "main": "index.js",
   "typings": "index.d.ts",
@@ -13,8 +13,8 @@
   },
   "exports": {
     "./alert": {
-      "import": "./dist/test-microbundle.modern.js",
-      "node": "./dist/test-microbundle.cjs"
+      "import": "./dist/test-microbundle.modern.mjs",
+      "node": "./dist/test-microbundle.js"
     }
   },
   "typesVersions": {
