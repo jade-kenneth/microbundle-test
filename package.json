@@ -1,16 +1,15 @@
 {
   "name": "test-microbundle",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "multiple entry using microbundle",
   "main": "index.js",
-  "type": "module",
-  "typings": "dist/test-microbundle.d.ts",
+  "typings": "index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "microbundle --format modern,cjs src/*.ts --jsx  React.createElement --jsxFragment React.Fragment -o dist/"
+    "build": " microbundle --format modern,cjs src/*.ts --jsx  React.createElement --jsxFragment React.Fragment -o dist/ --compress --no-source-maps"
   },
   "exports": {
     "./alert": {
