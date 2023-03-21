@@ -1,6 +1,6 @@
 {
   "name": "test-microbundle",
-  "version": "0.0.21",
+  "version": "0.0.20",
   "description": "multiple entry using microbundle",
   "main": "index.js",
   "typings": "index.d.ts",
@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": " webpack --config webpack.config.js --mode=development",
+    "build": " microbundle --format modern,cjs src/*.tsx --jsx  React.createElement --jsxFragment React.Fragment -o dist/ --mode=development",
     "size-limit": "size-limit"
   },
   "exports": {
@@ -23,21 +23,16 @@
     }
   },
   "sideEffects": [
-    "@chakra-ui/react/**/*"
+    "@chakra-ui/react"
   ],
   "keywords": [],
   "author": "jade kenneth darunday",
   "license": "ISC",
   "devDependencies": {
-    "html-webpack-plugin": "^5.5.0",
     "microbundle": "^0.15.1",
     "size-limit": "^8.2.4",
     "source-map-explorer": "^2.5.3",
-    "ts-loader": "^9.4.2",
-    "typescript": "^5.0.2",
-    "webpack": "^5.76.2",
-    "webpack-bundle-analyzer": "^4.8.0",
-    "webpack-cli": "^5.0.1"
+    "webpack-bundle-analyzer": "^4.8.0"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.5.1",
