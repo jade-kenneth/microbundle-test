@@ -1,6 +1,6 @@
 {
   "name": "test-microbundle",
-  "version": "0.0.20",
+  "version": "0.0.19",
   "description": "multiple entry using microbundle",
   "main": "index.js",
   "typings": "index.d.ts",
@@ -13,7 +13,10 @@
     "size-limit": "size-limit"
   },
   "exports": {
-    "./alert": "./dist/test-microbundle.js"
+    "./alert": {
+      "import": "./dist/test-microbundle.modern.mjs",
+      "node": "./dist/test-microbundle.js"
+    }
   },
   "typesVersions": {
     "*": {
