@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": " microbundle --format modern,cjs src/*.tsx --jsx  React.createElement --jsxFragment React.Fragment -o dist/ ",
+    "build": " webpack --config webpack.config.js --mode=development",
     "size-limit": "size-limit"
   },
   "exports": {
