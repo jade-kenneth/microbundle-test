@@ -1,4 +1,5 @@
 const path = require("path");
+const CompressionPlugin = require("compression-webpack-plugin");
 module.exports = {
   entry: {
     accordion: "./src/accordion.tsx",
@@ -20,4 +21,13 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new CompressionPlugin({
+      test: /\.(js|css|html|svg|tsx)$/,
+      filename: "[path][base].gz",
+      algorithm: "gzip",
+      threshold: 10240,
+      minRatio: 0.8,
+    }),
+  ],
 };
