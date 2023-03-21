@@ -1,6 +1,6 @@
 {
   "name": "test-microbundle",
-  "version": "0.0.18",
+  "version": "0.0.20",
   "description": "multiple entry using microbundle",
   "main": "index.js",
   "typings": "index.d.ts",
@@ -9,13 +9,11 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": " microbundle --format modern,cjs src/*.ts --jsx  React.createElement --jsxFragment React.Fragment -o dist/ --compress --no-source-maps"
+    "build": " microbundle --format modern,cjs src/*.tsx --jsx  React.createElement --jsxFragment React.Fragment -o dist/ ",
+    "size-limit": "size-limit"
   },
   "exports": {
-    "./alert": {
-      "import": "./dist/test-microbundle.modern.mjs",
-      "node": "./dist/test-microbundle.js"
-    }
+    "./alert": "./dist/test-microbundle.js"
   },
   "typesVersions": {
     "*": {
@@ -24,14 +22,21 @@
       ]
     }
   },
+  "sideEffects": [
+    "@chakra-ui/react/**/*"
+  ],
   "keywords": [],
   "author": "jade kenneth darunday",
   "license": "ISC",
   "devDependencies": {
-    "microbundle": "^0.15.1"
+    "microbundle": "^0.15.1",
+    "size-limit": "^8.2.4",
+    "source-map-explorer": "^2.5.3",
+    "webpack-bundle-analyzer": "^4.8.0"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.5.1"
+    "@chakra-ui/react": "^2.5.1",
+    "react": "^18.2.0"
   },
   "publishConfig": {
     "access": "public"
